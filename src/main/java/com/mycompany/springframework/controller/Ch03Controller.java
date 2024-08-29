@@ -45,7 +45,7 @@ public class Ch03Controller {
 		model.addAttribute("param3", param3);
 		model.addAttribute("param4", param4);
 		model.addAttribute("param5", param5);
-		
+		model.addAttribute("chNum", "ch03");
 		
 		return "ch03/receiveParamData";
 	}
@@ -77,7 +77,7 @@ public class Ch03Controller {
 		model.addAttribute("param3", param3);
 		model.addAttribute("param4", param4);
 		model.addAttribute("param5", param5);
-		
+		model.addAttribute("chNum", "ch03");
 		
 		return "ch03/receiveParamData";
 	}
@@ -103,7 +103,7 @@ public class Ch03Controller {
 		model.addAttribute("param3", param3);
 		model.addAttribute("param4", param4);
 		model.addAttribute("param5", param5);
-		
+		model.addAttribute("chNum", "ch03");
 		
 		return "ch03/receiveParamData";
 	}
@@ -129,7 +129,7 @@ public class Ch03Controller {
 		model.addAttribute("param3", arg3);
 		model.addAttribute("param4", arg4);
 		model.addAttribute("param5", arg5);
-		
+		model.addAttribute("chNum", "ch03");
 		
 		return "ch03/receiveParamData";
 	}
@@ -145,7 +145,8 @@ public class Ch03Controller {
 		
 		//JSP로 데이터 전달 (CommandObject를 사용할 경우 자동으로 전달)
 		//model.addAttribute("ch03dto", dto);
-
+		model.addAttribute("chNum", "ch03");
+		
 		return "ch03/receiveCommandObject";
 	}
 	

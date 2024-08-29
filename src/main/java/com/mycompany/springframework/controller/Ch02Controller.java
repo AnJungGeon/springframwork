@@ -10,6 +10,7 @@ import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,14 +30,16 @@ public class Ch02Controller {
 	
 	
 	@RequestMapping("/getMethod")
-	public String getMethod() {
+	public String getMethod(Model model) {
+		model.addAttribute("chNum", "ch02");
 		log.info("실행");
 		return "ch02/getMethod";
 	}
 		
 	//@RequestMapping(value="/getMethod", method=RequestMethod.GET)
 	@GetMapping("/getAtag")
-	public String getAtag(String bno, String bkind) {
+	public String getAtag(String bno, String bkind, Model model) {
+		model.addAttribute("chNum", "ch02");
 		log.info("실행");
 		log.info("bno: " + bno);
 		log.info("bkind: " + bkind);
@@ -44,7 +47,8 @@ public class Ch02Controller {
 	}
 	
 	@GetMapping("/getFormTag")
-	public String getFormTag(String bno, String bkind) {
+	public String getFormTag(String bno, String bkind, Model model) {
+		model.addAttribute("chNum", "ch02");
 		log.info("실행");
 		log.info("bno: " + bno);
 		log.info("bkind: " + bkind);
@@ -52,7 +56,8 @@ public class Ch02Controller {
 	}
 	
 	@GetMapping("/getLocationHref")
-	public String getLocationHref(String bno, String bkind) {
+	public String getLocationHref(String bno, String bkind, Model model) {
+		model.addAttribute("chNum", "ch02");
 		log.info("실행");
 		log.info("bno: " + bno);
 		log.info("bkind: " + bkind);
@@ -60,7 +65,8 @@ public class Ch02Controller {
 	}
 	
 	@GetMapping("/getAjax1")
-	public String getAjax1(String bno, String bkind) {
+	public String getAjax1(String bno, String bkind, Model model) {
+		model.addAttribute("chNum", "ch02");
 		log.info("실행");
 		log.info("bno: " + bno);
 		log.info("bkind: " + bkind);
@@ -68,7 +74,8 @@ public class Ch02Controller {
 	}
 	
 	@GetMapping("/getAjax2")
-	public String getAjax2(String bno, String bkind) {
+	public String getAjax2(String bno, String bkind, Model model) {
+		model.addAttribute("chNum", "ch02");
 		log.info("실행");
 		log.info("bno: " + bno);
 		log.info("bkind: " + bkind);
@@ -76,13 +83,15 @@ public class Ch02Controller {
 	}
 	
 	@GetMapping("/postMethod")
-	public String postMethod() {
+	public String postMethod(Model model) {
+		model.addAttribute("chNum", "ch02");
 		logger.info("실행");
 		return "ch02/postMethod";
 	}
 	
 	@PostMapping("/postFormTag")
-	public String postFormTag(String bno, String bkind) {
+	public String postFormTag(String bno, String bkind, Model model) {
+		model.addAttribute("chNum", "ch02");
 		log.info("실행");
 		log.info("bno: " + bno);
 		log.info("bkind: " + bkind);
@@ -90,7 +99,8 @@ public class Ch02Controller {
 	}
 	
 	@PostMapping("/postAjax1")
-	public String postAjax1(String bno, String bkind) {
+	public String postAjax1(String bno, String bkind, Model model) {
+		model.addAttribute("chNum", "ch02");
 		log.info("실행");
 		log.info("bno: " + bno);
 		log.info("bkind: " + bkind);
@@ -98,7 +108,8 @@ public class Ch02Controller {
 	}
 	
 	@PostMapping("/postAjax2")
-	public String postAjax2(String bno, String bkind) {
+	public String postAjax2(String bno, String bkind, Model model) {
+		model.addAttribute("chNum", "ch02");
 		log.info("실행");
 		log.info("bno: " + bno);
 		log.info("bkind: " + bkind);
@@ -113,6 +124,7 @@ public class Ch02Controller {
 		mav.addObject("bkind", "notice");
 		mav.addObject("mid", "user1");
 		mav.addObject("memail", "user1@mycompany.com");
+		mav.addObject("ch02" , "chNum");
 		mav.setViewName("ch02/returnModelAndView");
 		return mav;
 	}
@@ -151,13 +163,15 @@ public class Ch02Controller {
 	
 	@LoginCheck
 	@GetMapping("/mypage")
-	public String mypage() {
+	public String mypage(Model model) {
+		model.addAttribute("chNum", "ch02");
 		log.info("실행");
 		return "ch02/mypage";
 	}
 	
 	@GetMapping("/loginForm")
-	public String loginForm() {
+	public String loginForm(Model model) {
+		model.addAttribute("chNum", "ch02");
 		log.info("실행");
 		return "ch02/loginForm";
 	}
