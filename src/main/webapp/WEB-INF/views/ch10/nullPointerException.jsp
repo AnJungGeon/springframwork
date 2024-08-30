@@ -6,16 +6,11 @@ include 지시자의 역할 : 외부의 파일의 내용을 가져와서 삽입�
 
 <div class="card">
 	<div class="card-header">
-		Home
+		NullPointerException이 발생
 	</div>
 
 	<div class="card-body">
-		<img 
-			src="${pageContext.request.contextPath}/resources/image/photos/photo1.jpg"
-		height="100"/>
-			<img 
-		src="resources/image/photos/photo2.jpg"
-		height="100"/>
+		null 인 상태에서 필드나 메소드를 사용했습니다.
 	</div>
 </div>		
 

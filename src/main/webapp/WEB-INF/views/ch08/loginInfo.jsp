@@ -6,16 +6,14 @@ include 지시자의 역할 : 외부의 파일의 내용을 가져와서 삽입�
 
 <div class="card">
 	<div class="card-header">
-		Home
+		로그인 정보
 	</div>
 
 	<div class="card-body">
-		<img 
-			src="${pageContext.request.contextPath}/resources/image/photos/photo1.jpg"
-		height="100"/>
-			<img 
-		src="resources/image/photos/photo2.jpg"
-		height="100"/>
+		<p>mid : ${login.mid }</p>	
+		<p>mname : ${login.mname}</p>	
+		<p>mpassword : ${login.mpassword }</p>	
+		<p>memail : ${login.memail }</p>	
 	</div>
 </div>		
 

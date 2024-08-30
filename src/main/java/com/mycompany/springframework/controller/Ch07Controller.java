@@ -29,15 +29,16 @@ public class Ch07Controller {
 		//Application 사용범위(모든 브라우저에서 사용할 수 있는 범위)
 		ServletContext application = request.getServletContext();
 		application.setAttribute("key4", "value4");
-		
+		model.addAttribute("chNum", "ch07");
 		
 		return "ch07/objectScope";
 	}
 	
 	@GetMapping("/objectScope2")
 	public String objectScope2(HttpServletRequest request,HttpSession session, Model model ) {
+		
 		//Request 사용범위(요청과 헤더 사이에 사용할 수 있는 범위)
-
+		model.addAttribute("chNum", "ch07");
 		
 		return "ch07/objectScope";
 	}

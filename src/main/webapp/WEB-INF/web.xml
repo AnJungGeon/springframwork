@@ -38,7 +38,20 @@
 			<param-value>classpath:spring/dispatcher/*.xml</param-value>
 			<!--<param-value>/WEB-INF/spring/dispatcher/*.xml</param-value>-->
 		</init-param>
+		
+		<init-param>
+			<param-name>throwExceptionIfNoHandlerFound</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		
 		<load-on-startup>1</load-on-startup>
+		<!-- Multipart/form-data를 해석하기 위한 설정 -->
+		<multipart-config>
+			<location>C:/Temp</location>
+			<max-file-size>20971520</max-file-size>
+			<max-request-size>104857600</max-request-size>
+			<file-size-threshold>1024</file-size-threshold>
+		</multipart-config>
 		<!-- WAS가 해석시점에 만들어지게 설정  -->
 	</servlet>
 	<!-- ======================================================= -->
@@ -83,4 +96,10 @@
 		<filter-name>loginCheckFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping> -->
+	
+	
+<!-- 	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/views/ch10/404.jsp</location>
+	</error-page> -->
 </web-app>

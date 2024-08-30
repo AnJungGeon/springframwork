@@ -36,7 +36,7 @@ public class Ch05Controller {
 		}
 		
 		model.addAttribute("browser", browser);
-		
+		model.addAttribute("chNum", "ch05");
 		String clientIp = request.getRemoteAddr();
 		log.info("clientIp: " + clientIp);
 		model.addAttribute("clientIp", clientIp);
@@ -72,7 +72,7 @@ public class Ch05Controller {
 		
 		model.addAttribute("mid", mid);
 		model.addAttribute("memail", memail);
-		
+		model.addAttribute("chNum", "ch05");
 		return "ch05/readCookie";
 	}
 	
